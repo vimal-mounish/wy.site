@@ -4,99 +4,233 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WY App</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <title>WY App - Your Interview Proctoring Solution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-pattern {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="./script.js"></script>
 </head>
 
-<body class="bg-gray-100">
-    <!-- Navigation Bar -->
-    <nav class="bg-white shadow-lg p-4">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-blue-600">WY App</a>
-            <ul class="flex space-x-4">
-                <li><a href="#" class="text-gray-700 hover:text-blue-600">Home</a></li>
-                <li><a href="#features" class="text-gray-700 hover:text-blue-600">Features</a></li>
-                <li><a href="#about" class="text-gray-700 hover:text-blue-600">About</a></li>
-                <li><a href="#contact" class="text-gray-700 hover:text-blue-600">Contact</a></li>
-                <li><a href="#download" class="text-gray-700 hover:text-blue-600">Download</a></li>
-            </ul>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <a href="#" class="text-2xl font-bold text-blue-600">WY App</a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition duration-300">Features</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition duration-300">About</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition duration-300">Contact</a>
+                    <a href="#download"
+                        class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-blue-700 transition duration-300">Download</a>
+                </div>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="bg-blue-600 text-white py-20">
-        <div class="container mx-auto text-center">
-            <h1 class="text-4xl font-bold mb-4">Welcome to WY App</h1>
-            <p class="text-xl mb-8">Your reliable solution for interview proctoring.</p>
-            <a href="#features" class="bg-white text-blue-600 px-4 py-2 rounded-full font-semibold">Learn More</a>
+    <section class="hero-pattern text-white pt-32 pb-20">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-5xl font-bold mb-4">Welcome to WY App</h1>
+            <p class="text-xl mb-8">Your reliable solution for interview proctoring</p>
+            <a href="#features"
+                class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-block">Learn
+                More</a>
         </div>
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white shadow-lg p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Feature One</h3>
-                    <p class="text-gray-700">Detailed explanation of feature one.</p>
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="feature-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 cursor-pointer"
+                    data-title="Invite People"
+                    data-content="Easily invite participants to your meeting and manage their roles. This feature allows for seamless collaboration and efficient team management. You can assign different permissions to participants, making it perfect for various meeting types, from interviews to team collaborations."
+                    data-image="./images/wy-invite.png">
+                    <img src="./images/wy-invite.png" alt="Invite People" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-users mr-2 text-blue-600"></i>
+                            Invite People
+                        </h3>
+                        <p class="text-gray-600">Invite people to your meeting and manage their roles.</p>
+                    </div>
                 </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Feature Two</h3>
-                    <p class="text-gray-700">Detailed explanation of feature two.</p>
+                <div class="feature-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 cursor-pointer"
+                    data-title="Integrated Development Environment (IDE)"
+                    data-content="Our built-in IDE is a powerful tool for developers to write, test, and run code directly in the browser. It supports multiple programming languages, offers syntax highlighting, and provides real-time compilation and execution. Perfect for technical interviews or collaborative coding sessions."
+                    data-image="./images/wy-ide-1.png">
+                    <img src="./images/wy-ide-1.png" alt="IDE" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-code mr-2 text-blue-600"></i>
+                            IDE
+                        </h3>
+                        <p class="text-gray-600">Write and run code directly in the browser.</p>
+                    </div>
                 </div>
-                <div class="bg-white shadow-lg p-6 rounded-lg">
-                    <h3 class="text-2xl font-bold mb-4">Feature Three</h3>
-                    <p class="text-gray-700">Detailed explanation of feature three.</p>
+                <div class="feature-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 cursor-pointer"
+                    data-title="Interactive Whiteboard"
+                    data-content="Our collaborative whiteboard tool allows for real-time drawing, writing, and annotating. It's perfect for brainstorming sessions, explaining complex ideas, or working through problems together. Multiple users can interact with the whiteboard simultaneously, fostering creativity and teamwork."
+                    data-image="./images/wy-whiteboard.png">
+                    <img src="./images/wy-whiteboard.png" alt="Whiteboard" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-chalkboard mr-2 text-blue-600"></i>
+                            Whiteboard
+                        </h3>
+                        <p class="text-gray-600">Collaborate in real-time with our interactive whiteboard.</p>
+                    </div>
+                </div>
+                <div class="feature-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 cursor-pointer"
+                    data-title="Real-time Chat"
+                    data-content="Stay connected with all participants through our real-time chat feature. Share links, ask questions, or provide additional information without interrupting the main conversation. The chat supports text formatting, file sharing, and emoji reactions for a rich communication experience."
+                    data-image="./images/wy-chat.png">
+                    <img src="./images/wy-chat.png" alt="Chat" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-comments mr-2 text-blue-600"></i>
+                            Chat
+                        </h3>
+                        <p class="text-gray-600">Communicate with participants in real-time.</p>
+                    </div>
+                </div>
+                <div class="feature-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300 cursor-pointer"
+                    data-title="Create Meetings"
+                    data-content="Easily set up different types of meetings to suit your needs. Whether it's an interview, a broadcast, or a regular team meeting, our platform provides customizable options. Set meeting duration, participant roles, and required features to ensure a smooth and productive session."
+                    data-image="./images/wy-create-meetings.png">
+                    <img src="./images/wy-create-meetings.png" alt="Create Meeting" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 flex items-center">
+                            <i class="fas fa-calendar-plus mr-2 text-blue-600"></i>
+                            Create Meetings
+                        </h3>
+                        <p class="text-gray-600">Set up interviews, broadcasts, or regular meetings.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="bg-gray-200 py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">About Us</h2>
-            <p class="text-gray-700 max-w-2xl mx-auto">WY App is a comprehensive interview proctoring solution designed
-                to ensure the integrity and fairness of the interview process. Our app uses advanced technologies to
-                monitor and analyze interview sessions, providing a seamless and secure experience for both interviewers
-                and candidates.</p>
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Us</h2>
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                        alt="Team" class="rounded-lg shadow-lg">
+                </div>
+                <div class="w-full md:w-1/2 md:pl-12">
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        WY App is a comprehensive interview proctoring solution designed to ensure the integrity and
+                        fairness of the interview process. Our app uses advanced technologies to monitor and analyze
+                        interview sessions, providing a seamless and secure experience for both interviewers and
+                        candidates.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Download Section -->
-    <section id="download" class="py-20">
-        <div class="container mx-auto text-center">
+    <section id="download" class="py-20 bg-blue-600 text-white">
+        <div class="container mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold mb-8">Download WY App</h2>
-            <p class="text-gray-700 max-w-2xl mx-auto mb-8">Get the latest version of WY App for your platform.</p>
+            <p class="text-xl max-w-2xl mx-auto mb-12">Get the latest version of WY App for your platform.</p>
             <div class="flex justify-center space-x-4">
-                <a href="https://github.com/<your-username>/<your-repo>/releases/latest/download/WY.App.Setup.exe"
-                    class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">Download for Windows</a>
-                <a href="https://github.com/<your-username>/<your-repo>/releases/latest/download/WY.App.dmg"
-                    class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">Download for macOS</a>
+                <a href="https://github.com/vimal-mounish/wy.site/releases/tag/latest.zip"
+                    class="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center hover:bg-gray-900 transition duration-300">
+                    <i class="fab fa-apple mr-2"></i> Download for macOS
+                </a>
+                <a href="https://github.com/vimal-mounish/wy.site/releases/tag/latest.tar.gz"
+                    class="bg-black text-white px-6 py-3 rounded-lg font-semibold flex items-center hover:bg-gray-900 transition duration-300">
+                    <i class="fab fa-windows mr-2"></i> Download for Windows
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-20">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-8">Contact Us</h2>
-            <p class="text-gray-700 max-w-2xl mx-auto mb-8">If you have any questions or would like to learn more about
-                WY App, please feel free to contact us.</p>
-            <a href="mailto:info@wyapp.com" class="bg-blue-600 text-white px-4 py-2 rounded-full font-semibold">Email
-                Us</a>
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="max-w-lg mx-auto">
+                <form action="https://formspree.io/f/xwpeknla" method="POST">
+                    <div class="mb-4">
+                        <input type="text" name="name" placeholder="Your Name"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <input type="email" name="email" placeholder="Your Email"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <textarea name="message" placeholder="Your Message" rows="4"
+                            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Send
+                        Message</button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-6">
-        <div class="container mx-auto text-center">
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
             <p>&copy; 2024 WY App. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                        class="fab fa-facebook"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                        class="fab fa-twitter"></i></a>
+                <a href="#" class="text-gray-400 hover:text-white transition duration-300"><i
+                        class="fab fa-linkedin"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <!-- Modal -->
+    <div id="featureModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50">
+        <div class="relative top-20 mx-auto p-5 border w-11/12 md:w-3/4 lg:w-1/2 shadow-lg rounded-md bg-white">
+            <div class="mt-3">
+                <h3 id="modalTitle" class="text-2xl leading-6 font-bold text-gray-900 mb-4"></h3>
+                <img id="modalImage" src="" alt="Feature" class="w-full h-64 object-cover rounded-lg mb-4">
+                <div class="mt-2 px-7 py-3">
+                    <p id="modalContent" class="text-gray-600"></p>
+                </div>
+                <div class="items-center px-4 py-3">
+                    <button id="closeModal"
+                        class="px-4 py-2 bg-blue-600 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
